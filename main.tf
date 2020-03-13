@@ -15,7 +15,6 @@ resource "digitalocean_droplet" "vm" {
   name               = var.vm_name
 
   provisioner "local-exec" {
-    // doesn't listen for a little while after API gives the all-clear
     command = "sleep 25s"
   }
 
